@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manual Tester Highlighter</title>
+
+    <link
+        rel="stylesheet"
+        href="popup.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <h1>
+                Manual Tester
+            </h1>
+
+            <p>
+                Selector Highlighter
+            </p>
+
+        </header>
+
+
+        <!-- ENABLE / DISABLE -->
+
+        <section class="card status-card">
+
+            <div>
+
+                <div class="label">
+                    Highlight Mode
+                </div>
+
+                <div
+                    id="statusText"
+                    class="status-text"
+                >
+                    OFF
+                </div>
+
+            </div>
+
+
+            <label
+                class="switch"
+                aria-label="Toggle highlight mode"
+            >
+
+                <input
+                    type="checkbox"
+                    id="enableToggle"
+                >
+
+                <span class="slider"></span>
+
+            </label>
+
+        </section>
+
+
+        <!-- SELECTOR TYPE -->
+
+        <section class="card">
+
+            <div class="label">
+                Selector Type
+            </div>
+
+
+            <div class="selector-container">
+
+                <button
+                    type="button"
+                    class="selector-button selected"
+                    data-selector-type="id"
+                >
+                    ID
+                </button>
+
+
+                <button
+                    type="button"
+                    class="selector-button"
+                    data-selector-type="css"
+                >
+                    CSS
+                </button>
+
+
+                <button
+                    type="button"
+                    class="selector-button"
+                    data-selector-type="xpath"
+                >
+                    XPath
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLOR -->
+
+        <section class="card">
+
+            <div class="label">
+                Highlight Color
+            </div>
+
+
+            <div class="color-container">
+
+
+                <button
+                    type="button"
+                    class="color-button red selected"
+                    data-color="red"
+                    title="Red"
+                >
+
+                    <span></span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="color-button green"
+                    data-color="green"
+                    title="Green"
+                >
+
+                    <span></span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="color-button blue"
+                    data-color="blue"
+                    title="Blue"
+                >
+
+                    <span></span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- CLEAR -->
+
+        <section class="card">
+
+            <button
+                id="clearButton"
+                class="clear-button"
+                type="button"
+            >
+                Clear All Highlights
+            </button>
+
+        </section>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <section class="instructions">
+
+            <strong>
+                How to use
+            </strong>
+
+
+            <ol>
+
+                <li>
+                    Turn Highlight Mode ON.
+                </li>
+
+                <li>
+                    Select ID, CSS, or XPath.
+                </li>
+
+                <li>
+                    Select a color.
+                </li>
+
+                <li>
+                    Drag around a webpage component.
+                </li>
+
+                <li>
+                    The component is identified by the selected selector.
+                </li>
+
+                <li>
+                    Double-click a box to delete it.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            100% local storage • No server
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Manual Tester Highlighter",
+  "version": "2.0.0",
+  "description": "Highlight webpage components using ID, CSS selector, or XPath. All data is stored locally.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Manual Tester Highlighter",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "utils/selector.js",
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

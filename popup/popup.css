@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    width: 330px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f5f7;
+
+    color: #222;
+
+}
+
+
+.container {
+
+    padding: 16px;
+
+}
+
+
+.header {
+
+    margin-bottom: 14px;
+
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+.header p {
+
+    margin: 4px 0 0;
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card,
+.instructions {
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.status-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.label {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+
+}
+
+
+.status-text {
+
+    font-size: 11px;
+
+    color: #777;
+
+}
+
+
+/* =========================
+   TOGGLE
+   ========================= */
+
+.switch {
+
+    position: relative;
+
+    width: 46px;
+
+    height: 24px;
+
+    display: inline-block;
+
+}
+
+
+.switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #c9c9c9;
+
+    border-radius: 24px;
+
+    transition: 0.2s;
+
+}
+
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+
+}
+
+
+.switch input:checked + .slider {
+
+    background: #222;
+
+}
+
+
+.switch input:checked + .slider::before {
+
+    transform: translateX(22px);
+
+}
+
+
+/* =========================
+   SELECTOR TYPE
+   ========================= */
+
+.selector-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+}
+
+
+.selector-button {
+
+    height: 36px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    background: #f7f7f7;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.selector-button.selected {
+
+    border: 2px solid #222;
+
+    background: #ffffff;
+
+}
+
+
+/* =========================
+   COLORS
+   ========================= */
+
+.color-container {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.color-button {
+
+    width: 54px;
+
+    height: 38px;
+
+    border: 2px solid transparent;
+
+    border-radius: 8px;
+
+    background: #f7f7f7;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.color-button.selected {
+
+    border-color: #222;
+
+}
+
+
+.color-button span {
+
+    display: block;
+
+    width: 23px;
+
+    height: 23px;
+
+    border-radius: 50%;
+
+}
+
+
+.color-button.red span {
+
+    background: #ff3b30;
+
+}
+
+
+.color-button.green span {
+
+    background: #34c759;
+
+}
+
+
+.color-button.blue span {
+
+    background: #007aff;
+
+}
+
+
+/* =========================
+   CLEAR BUTTON
+   ========================= */
+
+.clear-button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #222;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.clear-button:hover {
+
+    opacity: 0.85;
+
+}
+
+
+/* =========================
+   INSTRUCTIONS
+   ========================= */
+
+.instructions {
+
+    font-size: 11px;
+
+    color: #555;
+
+    line-height: 1.35;
+
+}
+
+
+.instructions strong {
+
+    color: #222;
+
+}
+
+
+.instructions ol {
+
+    margin: 7px 0 0;
+
+    padding-left: 18px;
+
+}
+
+
+.instructions li {
+
+    margin-bottom: 4px;
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 10px;
+
+    padding-top: 2px;
+
+}

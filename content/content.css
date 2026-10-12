@@ -1,0 +1,382 @@
+/*
+============================================================
+MANUAL TESTER HIGHLIGHTER
+CONTENT CSS
+============================================================
+*/
+
+
+/*
+============================================================
+HIGHLIGHT LAYER
+============================================================
+*/
+
+#manual-tester-highlighter-layer {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    z-index: 2147483646;
+
+    pointer-events: none;
+
+}
+
+
+/*
+============================================================
+HIGHLIGHT
+============================================================
+*/
+
+.manual-tester-highlight {
+
+    position: fixed;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    pointer-events: auto;
+
+    cursor: pointer;
+
+}
+
+
+/*
+============================================================
+RED
+============================================================
+*/
+
+.manual-tester-highlight.red {
+
+    border:
+        3px solid
+        #ff3b30;
+
+}
+
+
+/*
+============================================================
+GREEN
+============================================================
+*/
+
+.manual-tester-highlight.green {
+
+    border:
+        3px solid
+        #34c759;
+
+}
+
+
+/*
+============================================================
+BLUE
+============================================================
+*/
+
+.manual-tester-highlight.blue {
+
+    border:
+        3px solid
+        #007aff;
+
+}
+
+
+/*
+============================================================
+HOVER
+============================================================
+*/
+
+.manual-tester-highlight:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+}
+
+
+/*
+============================================================
+DRAWING RECTANGLE
+============================================================
+*/
+
+.manual-tester-drawing {
+
+    position: fixed;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    pointer-events: none;
+
+    border-width: 2px;
+
+    border-style: dashed;
+
+    z-index: 2147483647;
+
+}
+
+
+/*
+============================================================
+TOOLTIP
+============================================================
+*/
+
+.manual-tester-tooltip {
+
+    position: fixed;
+
+    box-sizing: border-box;
+
+    max-width: 360px;
+
+    min-width: 120px;
+
+    padding:
+        10px 14px;
+
+    background:
+        #222;
+
+    color:
+        #fff;
+
+    border-radius:
+        6px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    white-space:
+        pre-wrap;
+
+    word-break:
+        break-word;
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    z-index:
+        2147483647;
+
+
+    /*
+    IMPORTANT:
+
+    Tooltip must not capture mouse.
+
+    This prevents:
+
+        highlight
+             ↓
+        tooltip
+             ↓
+        mouse leaves highlight
+             ↓
+        tooltip disappears
+
+    */
+
+    pointer-events:
+        none;
+
+}
+
+
+/*
+============================================================
+CONTEXT MENU
+============================================================
+*/
+
+.manual-tester-context-menu {
+
+    position: fixed;
+
+    width: 250px;
+
+    box-sizing: border-box;
+
+    padding:
+        5px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #d1d5db;
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    z-index:
+        2147483647;
+
+}
+
+
+/*
+============================================================
+CONTEXT MENU BUTTON
+============================================================
+*/
+
+.manual-tester-context-menu-item {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    padding:
+        9px 10px;
+
+    border:
+        none;
+
+    border-radius:
+        5px;
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        13px;
+
+    cursor:
+        pointer;
+
+}
+
+
+/*
+============================================================
+DELETE BUTTON
+============================================================
+*/
+
+.manual-tester-context-menu-item.delete {
+
+    color:
+        #d92d20;
+
+    font-weight:
+        600;
+
+}
+
+
+/*
+============================================================
+CONTEXT MENU HOVER
+============================================================
+*/
+
+.manual-tester-context-menu-item:hover {
+
+    background:
+        #f3f4f6;
+
+}
+
+
+/*
+============================================================
+SELECTOR INFORMATION
+============================================================
+*/
+
+.manual-tester-context-menu-selector {
+
+    margin-top:
+        4px;
+
+    padding:
+        8px 10px;
+
+    border-top:
+        1px solid
+        #e5e7eb;
+
+    color:
+        #6b7280;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.4;
+
+    white-space:
+        normal;
+
+    word-break:
+        break-word;
+
+    user-select:
+        text;
+
+}
